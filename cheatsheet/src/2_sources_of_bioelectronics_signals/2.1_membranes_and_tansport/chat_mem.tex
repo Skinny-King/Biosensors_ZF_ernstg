@@ -1,0 +1,154 @@
+\subsection*{Diffusion}
+\textbf{Concentration:}
+\[
+c(x,t)
+\qquad
+\Big[ \mathrm{M} = \frac{\mathrm{mol}}{L}
+= 10^3\,\frac{\mathrm{mol}}{m^3} \Big]
+\]
+
+\textbf{Flux:}
+\[
+\Phi(x,t)
+\qquad
+\Big[ \frac{\mathrm{mol}}{cm^2\,s}
+= 10^4\,\frac{\mathrm{mol}}{m^2\,s} \Big]
+\]
+
+% ----------------
+\textbf{Fick's First Law (1D):}
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\[
+\boxed{
+\Phi(x,t)
+= -D\,\frac{\partial c(x,t)}{\partial x}
+}
+\]
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\[
+\boxed{
+t_{1/2}
+\approx \frac{x_{1/2}^2}{D}
+}
+\]
+\end{minipage}
+
+\begin{minipage}[t]{\linewidth}
+\vspace{2pt}
+\tiny
+$D$ : diffusion coefficient $\left[\frac{m^2}{s}\right]$
+(smaller for large molecules, viscous media) \\
+$t_{1/2}$ : half-time \hfill
+$x_{1/2}$ : half-distance
+\end{minipage}
+
+% ----------------
+\textbf{Continuity equation:}
+\[
+\frac{\partial c(x,t)}{\partial t}
+= -\,\frac{\partial \Phi(x,t)}{\partial x}
+\]
+
+% ----------------
+\textbf{Diffusion equation (1D):}
+\[
+\boxed{
+\frac{\partial c(x,t)}{\partial t}
+= D\,\frac{\partial^2 c(x,t)}{\partial x^2}
+}
+\]
+
+% ----------------
+\textbf{Point source solution (Gaussian):}
+\[
+c(x,t)
+= \frac{n_0}{\sqrt{4\pi Dt}}
+\exp\!\left(-\frac{x^2}{4Dt}\right),
+\qquad
+\sigma = \sqrt{2Dt}
+\]
+
+% ----------------
+\textbf{Steady state diffusion:}
+\[
+\frac{\partial c}{\partial t}=0
+\quad \Rightarrow \quad
+\frac{\partial^2 c}{\partial x^2}=0
+\quad \Rightarrow \quad
+c(x)=ax+b
+\]
+
+% ----------------
+\textbf{Flux through membrane (thickness $d$):}
+\[
+\boxed{
+\Phi
+= -D\,\frac{c_o - c_i}{d}
+}
+\]
+
+% ================================
+\subsection*{Carrier Mediated Transport}
+% ================================
+
+\textbf{Saturating flux (Michaelis--Menten form):}
+\[
+\boxed{
+\Phi
+= \frac{\Phi_{\max}\,c}{K_M + c}
+}
+\]
+
+% ================================
+\subsection*{Ion Transport}
+% ================================
+
+\textbf{Nernst--Planck equation:}
+\[
+\boxed{
+J_n
+= -D_n\,\frac{dc_n}{dx}
+- u_n z_n F c_n\,\frac{d\psi}{dx}
+}
+\]
+
+% ----------------
+\textbf{Nernst equilibrium potential:}
+\[
+\boxed{
+V_n
+= \frac{RT}{z_n F}
+\ln\!\left(\frac{c_o}{c_i}\right)
+}
+\]
+
+\[
+\boxed{
+V_n
+\approx \frac{60}{z_n}
+\log_{10}\!\left(\frac{c_o}{c_i}\right)
+\ \text{mV}
+}
+\]
+
+% ----------------
+\textbf{Membrane potential (multiple ions, steady state):}
+\[
+\boxed{
+V_m
+= \frac{G_{Na}V_{Na} + G_K V_K + G_o V_o}
+{G_{Na}+G_K+G_o}
+}
+\]
+
+% ----------------
+\textbf{Donnan equilibrium (partition rule):}
+\[
+\boxed{
+\left(\frac{c_o}{c_i}\right)^{1/z}
+= \text{const}
+}
+\]

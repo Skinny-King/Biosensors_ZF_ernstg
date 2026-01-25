@@ -1,22 +1,52 @@
-\section*{Electrostatic}
+\subsection*{Electrostatic}
+
+\begin{minipage}[t]{0.58\linewidth}
+\textbf{The field of a current point source:}
+\vspace{-3pt}
+\[
+\fbox{$
+    \Phi_e(r)
+    = \frac{I_0}{4\pi\sigma}\,\frac{1}{r}
+$}
+\]
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\tiny
+\raggedright
+$\Phi_e$ : electric potential $[V]$\\
+$I_0$    : point source current $[A]$ \\
+$\sigma$ : conductivity $[\frac{1}{\Omega m}]$\\
+$r$      : distance from the source $[m]$\\
+$\vec{E}$: electric field $[\frac{V}{m}]$ \\
+$I_v$    : point sourcecurrent density $[\frac{A}{m^3}]$ \\
+\end{minipage}
+
+\begin{minipage}[t]{0.33\linewidth}
+\vspace{0pt}
 
 \textbf{Electrostatic field:}
 \[
     \vec{E} = -\nabla \Phi
 \]
-
-\textbf{Current density (Ohm's law):}
+\end{minipage}
+\begin{minipage}[t]{0.33\linewidth}
+\vspace{0pt}
+\textbf{Current density:}
 \[
     \vec{J} = \sigma \vec{E} = -\sigma \nabla \Phi
 \]
-
-
-\textbf{Outflow of current from an } $I_v$ \textbf{ point source:}
-\[
-    I_v = \nabla \cdot \vec{J}
-\]
-
+\end{minipage}
+\begin{minipage}[t]{0.3\linewidth}
+\vspace{0pt}
 \textbf{Poisson's equation:}
 \[
     \nabla^2 \Phi = -\frac{I_v}{\sigma}
+\]
+\end{minipage}
+
+\textbf{Outflow of current from an } $I_v$ \textbf{ point source:}
+\[\fbox{$
+    I_v = \nabla \cdot \vec{J} = -\sigma \nabla^2 \Phi
+$}
 \]
