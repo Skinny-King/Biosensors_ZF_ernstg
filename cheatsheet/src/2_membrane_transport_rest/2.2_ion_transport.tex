@@ -18,7 +18,7 @@ J_n
     \boxed{
     V_n
     = \frac{RT}{z_n F}
-    \ln\!\left(\frac{c_{out}}{c_{in}}\right)
+    \ln\!\left(\frac{c_{\text{out}}}{c_{\text{in}}}\right)
     }
     \]
 
@@ -26,7 +26,7 @@ J_n
     \boxed{
     V_n
     \approx \frac{60}{z_n}
-    \log_{10}\!\left(\frac{c_{out}}{c_{in}}\right)
+    \log_{10}\!\left(\frac{c_{\text{out}}}{c_{\text{in}}}\right)
     }
     \]
 \end{minipage}
@@ -38,8 +38,9 @@ J_n
     $T$ : temperature $[K]$ \\
     $F$ : Faraday constant $[96485\,\frac{C}{mol}]$ \\
     $z_n$ : ion valence (e.g., $+1$ for Na$^+$) \\
-    $c_{in}$, $c_{out}$ : in/outside ion concentration $[\text{M}]$ \\
-    $G_n$ : membr. conduct. $[\frac{S}{m^2}=\frac{1}{\Omega \cdot m^2}]$
+    $c_{\text{in}}$, $c_{\text{out}}$ : \text{in}/outside ion concentration $[\text{M}]$ \\
+    $G_n$ : membr. conduct. $[\frac{S}{m^2}=\frac{1}{\Omega \cdot m^2}]$\\
+    $D_n$ : diffusion coeff. $[m^2/s]$ \\
 \end{minipage}
 \vspace{0.5em}
 
@@ -48,8 +49,17 @@ J_n
 \textbf{Donnan equilibrium (partition rule):}
 \[
 \boxed{
-\left(\frac{c_{out}}{c_{in}}\right)^{1/z}
+\left(\frac{c_{\text{out}}}{c_{\text{in}}}\right)^{1/z}
 = \text{const}
 }
 \]
+\textbf{Electroneutrality:}
+ \[
+c_{K,\text{in}}(0) + c_{Na,\text{in}}(0)
+=
+c_{K,\text{in}}(t) + c_{Na,\text{in}}(t),
+\qquad
+{\tiny\text{in} = \text{intracell.}}
+\]
+
 

@@ -1,0 +1,20 @@
+\subsection*{Hodgkin-Huxley Model}
+\textbf{State Variables:}
+\begin{itemize}
+    \item $V_m$: membrane potential
+	\item $m$: opens sodium channels
+	\item $h$: closes sodium channels
+	\item $n$: opens potassium channels
+\end{itemize}
+\newpage
+\[
+J_m(t)= J_{Na} + J_K + J_{L}
+\]
+
+\[
+J_m
+= c_m \frac{\mathrm{d}V_m}{\mathrm{d}t}
++ G_K \bigl(V_m - V_K\bigr)
++ G_{Na} \bigl(V_m - V_{Na}\bigr)
++ G_L \bigl(V_m - V_L\bigr)
+\]

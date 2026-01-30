@@ -1,0 +1,61 @@
+\subsection*{Multiple Permeant Ion Model}
+\begin{minipage}[t]{0.51\linewidth}
+    \[
+    x = \frac{X}{A},
+    \quad
+    J_m = \frac{I_m}{A}
+    \]
+    \[
+    J_{n} = G_{n} (V_m - V_n)
+    \]
+
+\end{minipage}
+\begin{minipage}[t]{0.51\linewidth}
+\vspace{0pt}
+\tiny
+    $x$ : intrinsic size $[.../m^2]$ \\
+    $A$ : membrane surface area $[m^2]$ \\
+    $n$ : ion species index \\
+    $m$ : total membrane index \\
+    $J_m$ : membrane current density $[A/m^2]$ \\
+    $I_m$ : membrane current $[A]$ \\
+    $G_n$ : ion conductance $[S/m^2]$ \\
+    $V_m$ : membrane potential $[V]$ \\
+    $V_n$ or $E_n$ : Nernst potential of ion $n$ $[V]$
+\end{minipage}
+\begin{minipage}[t]{0.35\linewidth}
+\textbf{Multiple-ion model:}
+
+\includegraphics[width=0.6\linewidth]{src/0_images/membr_in_parallel.png}
+
+\end{minipage}
+\begin{minipage}[t]{0.65\linewidth}
+\vspace{0pt}
+for a steady state $V_m$ ($J_m = 0$):
+    \[
+    \boxed{
+    V_{m}
+    = \frac{G_{Na}V_{Na} + G_K V_K + G_o V_o}
+    {G_{Na}+G_K+G_o}
+    }
+    \]
+\end{minipage}
+\vspace{1pt}
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{2pt}
+\textbf{Rest vs Equilibrium potential:}\\
+Rest: $J_m = 0, \quad J_K, J_{Na}, J_o \neq  0\\
+V_m = \text{const} \approx -65 [mV]$\\
+
+Equilibrium: $J_K, J_{Na}, J_o = 0\\ V_m = V_K = V_{Na} = V_o$
+    \[
+    \boxed{
+    I_{12} = G_{12} (\overbracket[0.4pt]{V_{12}}^{\text{$V_1 - V_2$}} - E_{12})
+    }
+    \]
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{0pt}
+\includegraphics[width=1\linewidth]{src/0_images/comp_in_series.png}
+\includegraphics[width=1\linewidth]{src/0_images/membr_in_series.png}
+\end{minipage}
