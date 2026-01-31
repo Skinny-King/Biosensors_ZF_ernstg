@@ -215,3 +215,16 @@
 \setlength{\textwidth}{597pt} % max 597pt
 \setlength{\textheight}{845pt} % max 845pt
 \RequirePackage[top=0.01cm, bottom=0.05cm, left=0.01cm, right=0.01cm]{geometry}
+
+% farbige unterstreichungen
+\newcommand{\cunder}[2]{\textcolor{#1}{\uline{#2}}}
+\newcommand{\highlight}[2]{%
+  \colorbox{#1!20}{\strut #2}%
+}
+\newcommand{\mhighlight}[2]{%
+  \begingroup
+  \setlength{\fboxsep}{1pt}%
+  \colorbox{#1!20}{$\displaystyle #2$}%
+  \endgroup
+}
+

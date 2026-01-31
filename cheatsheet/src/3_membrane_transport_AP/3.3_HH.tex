@@ -1,0 +1,60 @@
+\subsection*{Hodgkin-Huxley Model}
+\textbf{State Variables:}
+\begin{itemize}
+    \item $V_m$: membrane potential
+	\item $m$: opens Na$^+$ channels (fast, $\tau_{m}$ small)
+	\item $h$: closes Na$^+$ channels (slow, $\tau_{h}$ large)
+	\item $n$: opens K$^+$ channels (delayed, slow, $\tau_{n}$ large)
+\end{itemize}
+
+\textbf{Kirchhoff:} 
+\[
+J_m(t)= \mhighlight{red}{J_c} + \mhighlight{orange}{J_{Na}} + \mhighlight{green}{J_K} + \mhighlight{blue}{J_{L}} + J_{\text{ext}} = 0
+\]
+
+\textbf{Membrane equation $(J_m = 0)$:}
+
+\begin {minipage}{1\linewidth}
+\tiny
+\[
+\begin{aligned}
+\mhighlight{red}{c_m \frac{\mathrm{d}V_m}{\mathrm{d}t}}
++ \mhighlight{orange}{\uline{g_{Na}} \bigl(V_m - V_{Na}\bigr)}
++ \mhighlight{green}{\dashuline{g_K} \bigl(V_m - V_K\bigr)}
+&+ \mhighlight{blue}{g_L \bigl(V_m - V_L\bigr)} \\
+&+ J_{\text{ext}} = 0
+\end{aligned}
+\]
+
+\vspace{0.5pt}
+\end{minipage}
+\textbf{Voltage-dependent conductances:}
+
+\begin{minipage}{0.4\linewidth}
+    \[
+    \uline{g_{Na} = \bar g_{Na} m^3 h}
+    \]
+    \[
+    \dashuline{g_K = \bar g_K n^4}
+    \]
+    \textbf{Gating dynamics:}
+    \[
+    \frac{\mathrm d x}{\mathrm d t}
+    = \frac{x_\infty(V_m) - x}{\tau_x(V_m)}
+    \]
+\end{minipage}
+\begin{minipage}{0.6\linewidth}
+    \tiny
+    \vspace{0pt}
+    $J_m$ : membr. current density $[A/m^2]$ \\
+    $J_c$ : capacitive current density $[A/m^2]$ \\
+    $J_{Na/K}$ : sodium ion current density $[A/m^2]$\\
+    $J_{L}$ : leakage current density $[A/m^2]$ \\
+    $J_{\text{ext}}$ : external current density $[A/m^2]$ \\
+    $c_m$ : membrane capacitance per unit area $[F/m^2]$\\
+    $g_{Na/K/L}$ : conductance per unit area$[S/m^2]$ \\
+    $\bar g_{Na/K}$ : max. conductance per unit area $[S/m^2]$\\
+    $x$ : (m, h, n) gating variable (open probability) $[-]$ \\
+    $x_\infty$ : steady-state value $[-]$ \\
+    $\tau_x$ : time constant $[s]$
+\end{minipage}
