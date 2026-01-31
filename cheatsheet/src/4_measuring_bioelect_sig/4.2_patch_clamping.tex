@@ -1,0 +1,162 @@
+\subsection*{Patch Clamping}
+
+\begin{minipage}[t]{0.4\linewidth}
+    \vspace{0pt}
+    \includegraphics[width=0.9\linewidth]{src/0_images/patch_clamp.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.55\linewidth}
+    \vspace{0pt}
+    \tiny
+    $C_p$ : pipette capacitance $[F]$ \\
+    $R_p$ : pipette resistance $[\Omega]$ \\
+    $R_{\mathrm{leak}}$ : leak  $[\Omega]$ \\
+    $C_m$ : membrane capacitance $[F]$ \\
+    $R_m$ : membrane resistance $[\Omega]$ \\
+    $V_m$ : membrane potential $[V]$ \\
+    $V_c$ : cell potential ($= 0$ if grounded) $[V]$ \\
+
+    $\Delta I$ : measured current change $[A]$ \\
+    $I_{\mathrm{RMS}}$ : RootMeanSquare noise current $[A]$ \\
+    $k_B$ : Boltzmann constant $[J/K]$ \\
+    $T$ : temperature $[K]$ \\
+    $\Delta f$ : measurement bandwidth $[Hz]$ \\
+\end{minipage}
+
+
+
+\begin{minipage}[t]{0.48\linewidth}
+\textbf{Signal to noise ratio:}
+
+    \[
+    \boxed{
+    \mathrm{SNR} = \frac{\Delta I}{I_{\mathrm{RMS}}}
+    }
+    \]
+
+\end{minipage}
+\begin{minipage}[t]{0.48\linewidth}
+    \[
+    \Delta I = I_m = \frac{V_m - V_c}{R_m}
+    \]
+    \[
+    I_{\mathrm{RMS}} = \sqrt{\frac{4 k_B T \, \Delta f}{R}}
+    \]
+\end{minipage}
+    \[
+    \frac{1}{R} = \frac{1}{R_m} + \frac{1}{R_{\mathrm{leak}}}, \quad
+    R = \frac{R_m R_{\mathrm{leak}}}{R_m + R_{\mathrm{leak}}}
+    \]
+\textbf{Seal Resistance:}
+    \[
+    R_{\mathrm{seal}} \geq R_{\mathrm{leak}}
+    =
+    \left(\frac{\left( \dfrac{V_m - V_c}{R_m} \right)^2}
+    {\mathrm{SNR}^2 \cdot 4 k_B T \, \Delta f}
+    -
+    \frac{1}{R_m}\right)^{-1}
+    \]
+
+\begin{minipage}[t]{0.48\linewidth}
+    \vspace{0pt}
+    \textbf{Capacitance:}
+    \[
+    C_p = l \, \frac{2\pi \varepsilon_r \varepsilon_0}
+    {\ln\!\left(\dfrac{d_{\text{out}}}{d_{\text{in}}}\right)}
+    \]
+    \[
+    \tau = R C_p = \frac{1}{2\pi f_c}
+    \]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+    \vspace{0pt}
+    \tiny
+    $\varepsilon_r$ : rel. permittivity of pipette $[-]$ \\
+    $\varepsilon_0$ : vacuum permittivity $\left[\mathrm{F/m}\right]$ \\
+    $l$ : pipette length $\left[\mathrm{m}\right]$ \\
+    $d_{\text{out}}$ : outer diameter of pipette $\left[\mathrm{nm}\right]$ \\
+    $d_{\text{in}}$ : inner diameter of pipette $\left[\mathrm{nm}\right]$ \\
+    $C_p$ : pipette capacitance $\left[\mathrm{F}\right]$ \\
+    $R$ : electrode resistance $\left[\Omega\right]$ (order: $\text{M}\Omega$)\\
+    $f_c$ : cutoff frequency $\left[\mathrm{Hz}\right]$ \\
+    $\tau$ : RC time constant $\left[\mathrm{s}\right]$
+\end{minipage}
+
+\textbf{Resistance of micropipette:} 
+
+\begin{minipage}[t]{0.7\linewidth}
+    \vspace{0pt}
+    \[
+    R_{\text{tot}}
+    = R_{\text{channel}} + R_{\text{access}}
+    \]
+    \[
+    R_{\text{channel}}
+    = \rho \frac{l}{A}
+    = \rho \frac{l}{\pi r^2}
+    \]
+
+    \[
+    \mathrm{d}R
+    = \rho \frac{\mathrm{d}r}{A(r)}, \quad
+    A(r) = 2 \pi r^2, \quad
+    \rho = \frac{1}{\sigma}
+    \]
+
+    \[
+    R_{\text{access}}
+    = \int_{r_{\text{pore}}}^{\infty} \frac{\rho}{2 \pi r^2} \, \mathrm{d}r
+    = \left. -\frac{\rho}{2 \pi} \frac{1}{r} \right|_{r_{\text{pore}}}^{\infty}
+    = \frac{\rho}{2 \pi r_{\text{pore}}}
+    \]
+\end{minipage}
+\begin{minipage}[t]{0.25\linewidth}
+    \vspace{0pt}
+    \includegraphics[width=1\linewidth]{src/0_images/micropipette.png}
+\end{minipage}
+
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+\textbf{Conical geometry:}
+\[
+R_{\text{access, cone}}
+= \frac{\rho}{\pi}
+\int_{x_1}^{x_2} \frac{1}{r(x)^2}\,\mathrm{d}x
+\]
+
+\[
+= \left.
+\frac{\rho}{\pi \tan^2(\theta)}
+\left(-\frac{1}{x}\right)
+\right|_{x_1}^{x_2}
+\]
+\[
+= \frac{\rho}{\pi \tan(\theta)}
+\left(
+\frac{1}{r_1} - \frac{1}{r_2}
+\right)
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.32\linewidth}
+\vspace{0pt}
+\includegraphics[width=\linewidth]{src/0_images/micropipette_conical.png}
+
+\[
+r(x) = x \tan(\theta)
+\]
+\end{minipage}
+\vfill \null \columnbreak
+
+
+
+
+ 
+
+
+
+
+
+
+

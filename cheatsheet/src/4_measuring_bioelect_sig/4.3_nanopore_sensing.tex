@@ -1,0 +1,133 @@
+\subsection*{Nanopore Sensing}
+\subsubsection*{Bandwidth and Noise}
+
+\textbf{Sampling (Nyquist):}
+\[
+f_{\text{sampling}} \ge 2\, f_{\text{translocation}},
+\qquad
+f_{\text{max}}
+= \frac{1}{2/f_s + T_{\text{translocation}}}
+\]
+
+\textbf{Total noise:}
+
+\begin{minipage}[t]{0.48\linewidth}
+\[
+I_{\mathrm{RMS}}^2
+= \int_{f_1}^{f_2} S(f)\,\mathrm{d}f
+\]
+\end{minipage}
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\tiny
+$R$ : nanopore resist. $\left[\Omega\right]$ ($\mathrm{M\Omega{-}G\Omega}$) \\
+$D$ : dielectric dissipation factor $[-]$ \\
+$C_M$ : membrane capacitance $\left[\mathrm{F}\right]$ \\
+$C_W$ : wiring capacitance $\left[\mathrm{F}\right]$ \\
+$C_I$ : input capacitance $\left[\mathrm{F}\right]$ \\
+$C_F$ : feedback capacitance $\left[\mathrm{F}\right]$ \\
+$C_{\text{tot}}$ : total parasitic capacitance $\left[\mathrm{F}\right]$ \\
+$v_n$ : voltage noise density $\left[\mathrm{V/\sqrt{Hz}}\right]$
+\end{minipage}
+
+\textbf{Noise regimes:}
+\[
+\begin{array}{ll}
+\text{Flicker }(<100\,\mathrm{Hz}): &
+S_f = \dfrac{\alpha_H I^2}{N_c f}, \\[6pt]
+\text{Johnson }(100\!-\!10^4\,\mathrm{Hz}): &
+S_J = \dfrac{4 k_B T}{R}, \\[6pt]
+\text{Dielectric }(20\!-\!100\,\mathrm{kHz}): &
+S_d = 8\pi k_B T\, C_M D\, f, \\[6pt]
+\text{Amplifier }(>100\,\mathrm{kHz}): &
+S_n \approx \bigl(2\pi f C_{\text{tot}} v_n\bigr)^2
+\end{array}
+\]
+
+\[
+C_{\text{tot}} = C_M + C_W + C_I + C_F,
+\qquad
+C_M = \varepsilon \frac{A}{d}
+\]
+
+\subsubsection*{PCR amplification}
+\begin{minipage}[t]{0.48\linewidth}
+\[
+N_t = N_0 \cdot 2^{t}
+\]
+
+\[
+t_{\min}
+= \log_2\!\left(\frac{N_{\min}}{N_0}\right)
+\]
+
+\[
+= \log_2\!\left(\frac{c_{\min} V N_A}{c_0 V N_A}\right)
+\]
+
+\[
+= \log_2\!\left(\frac{c_{\min}}{c_0}\right)
+\]
+\end{minipage}
+\begin{minipage}[t]{0.55\linewidth}
+\vspace{0pt}
+\tiny
+$N_0$ : initial number of DNA molecules $[-]$ \\
+$N_t$ : number of DNA molecules after $t$ cycles $[-]$ \\
+$N_{\min}$ : min. detect. number of molecules $[-]$ \\
+$t$ : number of PCR cycles $[-]$ \\
+$t_{\min}$ : min. required number of cycles $[-]$ \\
+$c_0$ : initial concentration $\left[\mathrm{mol/m^3}\right]$ \\
+$c_{\min}$ : mini detect.e concentration $\left[\mathrm{mol/m^3}\right]$ \\
+$V$ : sample volume $\left[\mathrm{m^3}\right]$ \\
+$\alpha$ : detection sensitivity factor $[-]$ \\
+$f$ : sensor signal (e.g.\ frequency or current) $[\text{a.u.}]$
+\end{minipage}
+\[
+c_{\min} = \alpha\, f
+\qquad
+(t = \text{number of cycles})
+\]
+
+\subsubsection*{PCR amplification}
+
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}
+\[
+N_t = N_0 \cdot 2^{t}
+\]
+\[
+c_{\min} = \alpha\, f
+\]
+\[
+\begin{aligned}
+t_{\min}
+&= \log_2\!\left(\frac{N_{\min}}{N_0}\right) \\
+&= \log_2\!\left(\frac{c_{\min} V N_A}{c_0 V N_A}\right) \\
+&= \log_2\!\left(\frac{c_{\min}}{c_0}\right)
+\end{aligned}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.53\linewidth}
+\vspace{0pt}
+\tiny
+$N_t$ : num. of DNA molecules after $t$ cycles $[-]$ \\
+$N_0$ : initial number of DNA molecules $[-]$ \\
+$N_{\min}$ : min. detec. number of molecules $[-]$ \\
+$t$ : number of PCR cycles $[-]$ \\
+$t_{\min}$ : min. required number of cycles $[-]$ \\
+$c_{\min}$ : min. detect. conc. $\left[\mathrm{mol/m^3}\right]$ \\
+$c_0$ : initial concentration $\left[\mathrm{mol/m^3}\right]$ \\
+$V$ : sample volume $\left[\mathrm{m^3}\right]$ \\
+$\alpha$ : detection sensitivity factor $[-]$ \\
+$f$ : sensor signal (e.g.\ frequency or current) [a.u.]
+\end{minipage}
+
+
+
+
+
+
+
+
