@@ -1,0 +1,80 @@
+\subsection*{Helical Sensor}
+\includegraphics[width=0.9\linewidth]{src/0_images/helix_parallel_plate_model.png}\\
+\textbf{Capacitance between two parallel wires:}
+
+\begin{minipage}[c]{0.6\linewidth}
+\centering
+\fbox{$
+C
+=
+\frac{\pi\,\varepsilon_{\text{tot}}\,l}
+{\ln\!\left(
+\frac{D}{2r}
++
+\sqrt{\left(\frac{D}{2r}\right)^2 - 1}
+\right)}
+$}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.3\linewidth}
+\centering
+\includegraphics[width=\linewidth]{src/0_images/helix.png}
+\end{minipage}
+
+\[
+\varepsilon_{\text{tot}}
+=
+\frac{\varepsilon_{\text{air}}\,\varepsilon_{\text{PDMS}}\,
+(d+2t_0)}
+{2t_0\,\varepsilon_{\text{air}} + d\,\varepsilon_{\text{PDMS}}},\quad
+D
+=
+d(\varepsilon)
++
+2t_0
++
+2r_0
+\]
+\[
+d(\varepsilon)
+=
+\frac{1}{\pi}
+\sqrt{
+l_{\text{turn}}^{\,2}
+-
+\left(\frac{1+\varepsilon}{n}\right)^2
+}
+-
+2(t_0 + r_0)
+\]
+\[
+l_{\text{turn}}
+=
+\sqrt{
+\left(\frac{1}{n}\right)^2
++
+\bigl(\pi\,(d_0 + 2(t_0 + r_0))\bigr)^2
+}
+\]
+
+\vspace{4pt}
+
+\begin{minipage}[t]{0.56\linewidth}
+\tiny
+$C$ : capacitance between two helical fibers $\left[\mathrm{F}\right]$ \\
+$l_{\text{turn}}$ : length of one unwound helix turn $\left[\mathrm{m}\right]$ \\
+$n$ : number of helix turns per unit length $\left[\mathrm{1/m}\right]$ \\
+$\varepsilon_{\text{tot}}$ : effective permittivity (air + PDMS) $\left[\mathrm{F/m}\right]$ \\
+$\varepsilon_{\text{air}}$ : permittivity of air $\left[\mathrm{F/m}\right]$ \\
+$\varepsilon_{\text{PDMS}}$ : permittivity of PDMS $\left[\mathrm{F/m}\right]$ \\
+$l$ : effective overlapping fiber length $\left[\mathrm{m}\right]$ \\
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\tiny
+$r_0$ : fiber core radius $\left[\mathrm{m}\right]$ \\
+$t_0$ : PDMS coating thickness $\left[\mathrm{m}\right]$\\
+$d(\varepsilon)$ : inter-fiber gap under strain $\left[\mathrm{m}\right]$ \\
+$D$ : center-to-center fiber distance $\left[\mathrm{m}\right]$ \\
+$d_0$ : initial helix diameter $\left[\mathrm{m}\right]$ \\
+$\varepsilon$ : applied axial strain $\left[-\right]$
+\end{minipage}

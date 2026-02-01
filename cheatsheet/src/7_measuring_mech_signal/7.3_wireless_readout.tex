@@ -1,0 +1,54 @@
+\subsection*{Wireless Readout}
+
+\textbf{Resonance frequency:}
+\[
+f(\varepsilon)
+=
+\frac{f_0}{\sqrt{1+\varepsilon}}, \quad
+f_0
+=
+\frac{1}{2\pi\sqrt{L\,C}}, \quad
+\Delta f
+=
+f - f_0
+\]
+
+\begin{minipage}[t]{0.55\linewidth}
+    \textbf{Inductance of a coil:}
+    \[
+    L
+    =
+    \frac{\mu\,N^2\,A}{l}
+    \]
+    \textbf{Damping in a real system:}
+    \[
+    f_d
+    =
+    f\,
+    \sqrt{1 - \frac{1}{4Q^2}}
+    \]
+    \textbf{Gauge factor:}
+    \[
+    GF
+    =
+    \frac{\Delta f / f_0}{\varepsilon}
+    =
+    \frac{\dfrac{1}{\sqrt{1+\varepsilon}} - 1}{\varepsilon}
+    \] 
+\end{minipage}
+\begin{minipage}[t]{0.48\linewidth}
+\tiny
+$f(\varepsilon)$ : resonance frequency under strain $\left[\mathrm{Hz}\right]$ \\
+$f_0$ : unstrained resonance frequency $\left[\mathrm{Hz}\right]$ \\
+$\Delta f$ : resonance frequency shift $\left[\mathrm{Hz}\right]$ \\
+$f_d$ : damped resonance frequency $\left[\mathrm{Hz}\right]$ \\
+$L$ : inductance of the coil $\left[\mathrm{H}\right]$ \\
+$C$ : capacitance of the resonator $\left[\mathrm{F}\right]$ \\
+$Q$ : quality factor of the resonator $\left[-\right]$ \\
+$\varepsilon$ : applied axial strain $\left[-\right]$ \\
+$\mu$ : magnetic permeability $\left[\mathrm{H/m}\right]$ \\
+$N$ : number of coil turns $\left[-\right]$ \\
+$A$ : coil cross-sectional area $\left[\mathrm{m^2}\right]$ \\
+$l$ : coil length $\left[\mathrm{m}\right]$\\
+\includegraphics[width=0.6\linewidth]{src/0_images/wireless_readout.png}
+\end{minipage}

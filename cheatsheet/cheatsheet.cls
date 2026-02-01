@@ -31,8 +31,9 @@
 \RequirePackage{amsmath}
 \RequirePackage{changepage}
 \RequirePackage{etoolbox} % check ifempty
-\RequirePackage[dvipsnames]{xcolor}
-\newcommand{\customColor}{CornflowerBlue}  % default color
+% \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage[svgnames]{xcolor}
+\newcommand{\customColor}{LightSlateBlue}  % default color
 \RequirePackage{tcolorbox}
 
 

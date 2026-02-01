@@ -1,0 +1,113 @@
+\subsection*{Resistive Strain}
+\subsubsection*{Bulk Conductors}
+\textbf{Young's modulus:}
+
+\[
+E
+=
+\frac{\sigma}{\varepsilon}
+=
+\frac{F/A_0}{\Delta l / l_0}, \qquad
+A = \pi r^2, \qquad
+R = \rho \frac{l}{A}
+\]
+\textbf{Gauge factor:}\\
+Assuming volume conservation
+\(
+A\,l = \text{const.}
+\),
+one obtains:
+\[
+GF
+=
+\frac{\Delta R / R_0}{\Delta l / l_0}, \qquad
+\frac{\Delta R}{R_0}
+=
+2\,\frac{\Delta l}{l_0},\qquad
+\boxed{
+GF = 2
+}
+\]
+
+\subsubsection*{Nanowire-Elastomer Composite}
+{\tiny
+\[
+\sigma_0(R_w, R_c)
+=
+\frac{2}{R_w}
+\left[
+\frac{1}{2}\,r_m
+-
+\sqrt{\frac{R_c\,r_m}{2\,R_w\,n_a}}\;
+\tanh\!\left(
+\sqrt{\frac{R_w\,n_a\,r_m}{2\,R_c}}
+\right)
+\right]
+\]
+\[
+D
+=
+\frac{N_w\,L^2}{W\,S}, \quad
+\nu
+=
+-\frac{\varepsilon_y}{\varepsilon_x}
+=
+-\frac{\varepsilon_z}{\varepsilon_x}, \quad
+n_a(\varepsilon) 
+=
+n_{a0}(1+\varepsilon)^{-3\nu /2}
+\]
+\[
+R(\varepsilon,\nu,R_w,R_c,D)
+=
+\frac{(1+\varepsilon)^2\,
+\bigl(1+(1+\varepsilon)^{-1-\nu}\bigr)}
+{\sigma_0(\varepsilon)\,D\,
+\bigl(1-(\nu\varepsilon)^{1.7}\bigr)}
+\]
+
+\[
+i_0(r,\varepsilon)
+=
+\frac{r_m(\varepsilon)}{2}
+-
+\sqrt{\frac{r\,r_m(\varepsilon)}{2\,n_a(\varepsilon)}}
+\;
+\tanh\!\left(
+\sqrt{
+\frac{n_a(\varepsilon)\,r_m(\varepsilon)}{2\,r}
+}
+\right)
+\]
+
+\[
+GF(\varepsilon,\nu,r)
+=
+\frac{\mhighlight{red}{(1+\varepsilon)\bigl(1+(1+\varepsilon)^{-1-\nu}\bigr)}}
+{\mhighlight{blue}{2\bigl(1-(\nu\varepsilon)^{1.7}\bigr)}}
+\cdot 
+\mhighlight{green}{\frac{i_0(r,0)}{i_0(r,\varepsilon)}}
+\]
+\[
+= \frac{\mhighlight{red}{\text{Strain Geometry}}}
+{\mhighlight{blue}{\text{Loss of wires}}} 
+\cdot \mhighlight{green}{\text{Current Factor}}
+\]
+}
+\begin{minipage}[t]{0.5\linewidth}
+\tiny
+$\sigma_0$ : conductivity of nanowire network $\left[\mathrm{S}\right]$ \\
+$R_c$ : contact resistance $\left[\Omega\right]$ \\
+$R_w$ : nanowire resistance $\left[\Omega\right]$ \\
+$n_a$ : number of contacts per wire $\left[-\right]$ \\
+$r_m$ : effective wire length factor $\left[-\right]$ \\
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\tiny
+$D$ : areal density of nanowires $\left[\mathrm{m}^{-2}\right]$ \\
+$N_w$ : number of nanowires $\left[-\right]$ \\
+$L$ : length of nanowires $\left[\mathrm{m}\right]$ \\
+$W,S$ : width and length of sample $\left[\mathrm{m}\right]$ \\
+$\varepsilon$ : applied strain $\left[-\right]$ \\
+$\nu$ : Poisson ratio $\left[-\right]$
+\end{minipage}
