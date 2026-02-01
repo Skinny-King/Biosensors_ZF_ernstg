@@ -1,0 +1,89 @@
+\subsection*{Dipoles}
+
+\textbf{Real extracellular dipole (distributed source):}
+\[
+\Phi_e(P)
+=
+\frac{1}{4\pi\sigma_e}
+\int
+\boldsymbol{\tau}(x)\cdot
+\nabla\!\left(\frac{1}{r}\right)
+\,\mathrm{d}x, \quad
+\boldsymbol{\tau}(x)
+=
+I_i(x)\,\mathbf a_x
+\]
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{Single point dipole \\(far-field approx. $d/r \ll 1$):}
+
+\[
+\Phi_d(P)
+=
+\frac{\mathbf a_r \cdot \mathbf p}{4\pi \sigma\, r^2},
+\qquad
+\mathbf p = I_0\,\mathbf d
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\linewidth}
+\tiny
+$\Phi_d$ : dipole potential $\left[\mathrm{V}\right]$ \\
+$\boldsymbol{\tau}$ : dipole density $\left[\mathrm{A/m}\right]$ \\
+$\mathbf p$ : dipole moment $\left[\mathrm{A\,m}\right]$ \\
+$r$ : distance to observation point $\left[\mathrm{m}\right]$ \\
+$\mathbf a_r$ : radial unit vector \\
+$\mathbf a_x$ : axial unit vector\\
+$\mathbf d$ : distance between point sources
+\end{minipage}
+
+\subsubsection*{Disc Dipole (Fiber)}
+\textbf{Electrode on fiber: }
+\[
+\Phi_A(z)
+=
+-\frac{z\,\tau}{2\sigma}
+\left[
+\frac{1}{\sqrt{a^2 + z^2}}
+-
+\frac{1}{|z|}
+\right], \quad
+\overset{a \ll z}{\approx} \mp\,\frac{\tau\,a^2}{4\sigma\,z^2}
+\]
+\begin{minipage}[t]{0.55\linewidth}
+    
+\textbf{Electrode above fiber:}
+\[
+\Phi_B(h,l)
+=
+\frac{\tau\,\pi a^2\,l}
+{4\pi\sigma\,(l^2+h^2)^{3/2}}
+\]
+\includegraphics[width=0.8\linewidth]{src/0_images/disc_dipole.png}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+\tiny
+$\Phi_A$ : potential on fiber axis $\left[\mathrm{V}\right]$ \\
+$\Phi_B$ : potential above fiber $\left[\mathrm{V}\right]$ \\
+$\tau$ : dipole density $\left[\mathrm{A}/m\right]$ \\
+$\sigma$ : conductivity $\left[\mathrm{S/m}\right]$ \\
+$a$ : fiber (disc) radius $\left[\mathrm{m}\right]$ \\
+$z$ : axial distance f. disc center $\left[\mathrm{m}\right]$ \\
+$h$ : electrode height above fiber $\left[\mathrm{m}\right]$ \\
+$l$ : axial distance to electrode $\left[\mathrm{m}\right]$
+\end{minipage}
+Magn. of current dipole in fiber: \(p = \tau \pi a^2 = \sigma_{in}\Delta v_i \pi a^2\)
+\vfill
+
+\subsubsection*{Arbritrary Surface Dipole (Heart)}
+\[
+\Phi(\mathbf r)
+=
+\frac{\Delta\Phi}{4\pi}\,
+\Omega, \quad
+\Omega
+\;\approx\;
+\frac{\mathbf a_r \cdot \mathbf S}{r^2}
+=
+\frac{\overbracket[0.4pt]{A \cos{\theta}}^{\text{proj. surface}}}{r^2}
+\]
