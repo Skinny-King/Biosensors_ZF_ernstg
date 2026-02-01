@@ -9,6 +9,7 @@
     = \frac{I_0}{4\pi\sigma}\,\frac{1}{r}
 $}
 \]
+
 \end{minipage}\hfill
 \begin{minipage}[t]{0.48\linewidth}
 \vspace{0pt}
@@ -22,31 +23,43 @@ $\vec{E}$: electric field $[\frac{V}{m}]$ \\
 $I_v$    : point sourcecurrent density $[\frac{A}{m^3}]$ \\
 \end{minipage}
 
-\begin{minipage}[t]{0.33\linewidth}
+\begin{minipage}[t]{0.48\linewidth}
 \vspace{0pt}
 
 \textbf{Electrostatic field:}
 \[
-    \vec{E} = -\nabla \Phi
+    \vec{E} 
+    = 
+    -\nabla \Phi
+    =
+    \frac{I_0}{4\pi r^2\sigma}\mathbf{e_r}\ 
 \]
 \end{minipage}
-\begin{minipage}[t]{0.33\linewidth}
-\vspace{0pt}
-\textbf{Current density:}
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{-1pt}
+\textbf{Current density:} 
+\vspace{-1pt}
 \[
-    \vec{J} = \sigma \vec{E} = -\sigma \nabla \Phi
+    \vec{J} 
+    =
+    \sigma \vec{E}
+    =
+    -\sigma \nabla \Phi
+    =
+    \frac{I_0}{4\pi r^2}\mathbf{e_r}\
 \]
 \end{minipage}
-\begin{minipage}[t]{0.3\linewidth}
+\begin{minipage}[t]{\linewidth}
 \vspace{0pt}
-\textbf{Poisson's equation:}
+\textbf{Poisson equation and outflow of current from} $I_v$ \textbf{ point source:}
 \[
-    \nabla^2 \Phi = -\frac{I_v}{\sigma}
+\nabla^2 \Phi 
+= -\frac{I_v}{\sigma} \qquad
+\Longleftrightarrow \qquad
+\boxed{
+I_v 
+= \nabla \cdot \vec{J}
+= -\sigma \nabla^2 \Phi
+}
 \]
 \end{minipage}
-
-\textbf{Outflow of current from an } $I_v$ \textbf{ point source:}
-\[\fbox{$
-    I_v = \nabla \cdot \vec{J} = -\sigma \nabla^2 \Phi
-$}
-\]

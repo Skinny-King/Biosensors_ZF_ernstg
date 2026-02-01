@@ -1,6 +1,5 @@
 \subsection*{Nanopore Sensing}
 \subsubsection*{Bandwidth and Noise}
-
 \textbf{Sampling (Nyquist):}
 \[
 f_{\text{sampling}} \ge 2\, f_{\text{translocation}},
@@ -8,7 +7,6 @@ f_{\text{sampling}} \ge 2\, f_{\text{translocation}},
 f_{\text{max}}
 = \frac{1}{2/f_s + T_{\text{translocation}}}
 \]
-
 \textbf{Total noise:}
 
 \begin{minipage}[t]{0.48\linewidth}
@@ -51,45 +49,6 @@ C_M = \varepsilon \frac{A}{d}
 \]
 
 \subsubsection*{PCR amplification}
-\begin{minipage}[t]{0.48\linewidth}
-\[
-N_t = N_0 \cdot 2^{t}
-\]
-
-\[
-t_{\min}
-= \log_2\!\left(\frac{N_{\min}}{N_0}\right)
-\]
-
-\[
-= \log_2\!\left(\frac{c_{\min} V N_A}{c_0 V N_A}\right)
-\]
-
-\[
-= \log_2\!\left(\frac{c_{\min}}{c_0}\right)
-\]
-\end{minipage}
-\begin{minipage}[t]{0.55\linewidth}
-\vspace{0pt}
-\tiny
-$N_0$ : initial number of DNA molecules $[-]$ \\
-$N_t$ : number of DNA molecules after $t$ cycles $[-]$ \\
-$N_{\min}$ : min. detect. number of molecules $[-]$ \\
-$t$ : number of PCR cycles $[-]$ \\
-$t_{\min}$ : min. required number of cycles $[-]$ \\
-$c_0$ : initial concentration $\left[\mathrm{mol/m^3}\right]$ \\
-$c_{\min}$ : mini detect.e concentration $\left[\mathrm{mol/m^3}\right]$ \\
-$V$ : sample volume $\left[\mathrm{m^3}\right]$ \\
-$\alpha$ : detection sensitivity factor $[-]$ \\
-$f$ : sensor signal (e.g.\ frequency or current) $[\text{a.u.}]$
-\end{minipage}
-\[
-c_{\min} = \alpha\, f
-\qquad
-(t = \text{number of cycles})
-\]
-
-\subsubsection*{PCR amplification}
 
 \begin{minipage}[t]{0.45\linewidth}
 \vspace{0pt}
@@ -123,11 +82,3 @@ $V$ : sample volume $\left[\mathrm{m^3}\right]$ \\
 $\alpha$ : detection sensitivity factor $[-]$ \\
 $f$ : sensor signal (e.g.\ frequency or current) [a.u.]
 \end{minipage}
-
-
-
-
-
-
-
-

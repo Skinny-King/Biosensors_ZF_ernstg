@@ -1,0 +1,47 @@
+\subsection*{Transfer Function}
+\textbf{Distance from Fiber:}
+\[
+r
+=
+\sqrt{(x-x')^2 + (y-y')^2 + (z-z')^2}
+\]
+\begin{minipage}[t]{0.45\linewidth}
+\textbf{Extracellular potential:}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{-6pt}
+\[
+\fbox{$
+\Phi_e(P)
+=
+\frac{1}{4\pi\sigma_e}
+\int_{L}
+\frac{i_m \, dx}{r}
+$}
+\]
+\end{minipage}
+\[
+\begin{aligned}
+\overbracket[0.4pt]{\Phi_e(x',y',z')}^{y = 0, z = 0}
+&=
+\frac{1}{4\pi\sigma_e}
+\int_{L}
+\frac{i_m(x)\,dx}
+{\sqrt{(x-x')^2 + (y')^2 + (z')^2}}
+\\[6pt]
+&=
+\frac{1}{4\pi\sigma_e}
+\int_{L}
+H(x-x')\, i_m(x)\, dx
+\end{aligned}
+\]
+\textbf{Transfer Function:}
+\[
+H(x-x')
+=
+\frac{1}
+{\sqrt{(x-x')^2 + (y')^2 + (z')^2}}
+\]
+\includegraphics[width=0.8\linewidth]{src/0_images/i_m_vs_phi_vs_e_H.png}
+
