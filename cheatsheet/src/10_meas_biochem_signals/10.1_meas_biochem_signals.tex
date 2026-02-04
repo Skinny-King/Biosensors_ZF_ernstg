@@ -1,0 +1,57 @@
+\subsection*{Aptamers and Other Bioreceptors}
+
+Aptamers are short single-stranded DNA or RNA molecules that fold into specific 3D structures and bind target analytes with high affinity and specificity.
+
+\textbf{Binding reaction and dissociation constant:}
+\[
+[A] + [R]
+\;\xrightleftharpoons[k_d]{k_a}\;
+[AR]
+\qquad
+K_D
+= \frac{[A][R]}{[AR]}
+= \frac{k_d}{k_a}
+= \frac{1}{K_a}
+\]
+
+\begin{minipage}[t]{0.5\linewidth}
+\textbf{Half-maximal signal:}
+\[
+S_{1/2} = \frac{S_{\min}+S_{\max}}{2}
+\]
+
+\textbf{Fraction of bound receptors:}
+\[
+N_{\text{bound}} = \theta N_{\text{total}}
+\]
+\[
+\theta = \frac{c}{K_D + c}
+\]
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\tiny
+$[A]$ : free analyte concentration [M] \\
+$[R]$ : free receptor concentration [M] \\
+$[AR]$ : receptor--analyte complex [M] \\
+$c$ : analyte concentration [M] \\
+$k_a$ : association rate constant [$\mathrm{M^{-1}s^{-1}}$] \\
+$k_d$ : dissociation rate constant [$\mathrm{s^{-1}}$] \\
+$K_D$ : dissociation constant [M] \\
+$S_{\min}$ : minimal sensor signal (baseline) \\
+$S_{\max}$ : maximal sensor signal (saturation) \\
+$S_{1/2}$ : half-maximal sensor signal \\
+$S_0$ : sensor signal at zero analyte conc.\\
+$\sigma_{S_0}$ : standard deviation at zero analyte \\
+$dS/dc$ : sensitivity (slope of linear regime) \\
+$\mathrm{NSB}$ : non-specific binding contribution
+\end{minipage}
+
+\textbf{Limit of detection (LOD):}
+\[
+\mathrm{LOD}
+= \frac{3\sigma_{S_0}}{dS/dc}
+\sim \frac{\sqrt{S_0}}{dS/dc}
+\sim \frac{\sqrt{\mathrm{NSB}}}{dS/dc}
+\]
+\vfill

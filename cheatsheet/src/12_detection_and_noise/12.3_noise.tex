@@ -1,0 +1,58 @@
+\subsection*{Noise}
+
+\textbf{Noise Equivalent Power (NEP):}
+Optical power required for $\mathrm{SNR}=1$.
+
+\textbf{Shot noise:}
+Due to Poisson statistics of photon arrival.
+\[
+i_n^2 = 2 q \bar{i} B
+\qquad
+B = 1/2 \tau
+\qquad
+\bar{i}=\langle I_{\text{sig}}\rangle
+\]
+
+\[
+\mathrm{SNR}_i
+= \sqrt{\frac{\eta P_{\text{sig}}}{2h\nu B}},
+\qquad
+\mathrm{SNR}_P
+= \frac{\eta P_{\text{sig}}}{2h\nu B}
+\]
+
+\textbf{Blackbody radiation:}
+Thermal background adds photocurrent and increases shot noise.
+\[
+P_{\text{bb}} \propto T^4,
+\qquad
+\lambda_{\max} T = 2.9\times10^7\,\text{\AA K}
+\]
+
+\[
+i_n^2
+= 2\eta q^2 B
+\frac{P_{\text{sig}} + P_{\text{bb}}}{h\nu}
+\]
+
+\textbf{Johnson (thermal) noise:}
+Thermal noise of resistors (often dominant).
+\[
+i_{\text{J}}^2 = \frac{4kTB}{R},
+\qquad
+v_{\text{J}}^2 = 4kTBR
+\]
+
+\textbf{Dark current shot noise:}
+Shot noise due to dark current.
+\[
+i_n^2 = 2 q i_{\text{dark}} B
+\]
+
+\textbf{1/f (flicker) noise:}
+Dominant at low frequencies.
+\[
+v_n^2 = \frac{a}{f^{\alpha}},
+\qquad
+\alpha \approx 1
+\]

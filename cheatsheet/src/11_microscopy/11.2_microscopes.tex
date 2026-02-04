@@ -1,0 +1,66 @@
+\subsection*{Microscopes}
+\subsubsection*{Compound Microscope}
+
+Combination of objective and eyepiece for high magnification.
+
+\textbf{Infinity correction:}
+Object in the front focal plane of the objective; parallel rays are focused by a tube lens.
+
+\textbf{Magnification:}
+\[
+M = M_{\mathrm{obj}} \cdot M_{\mathrm{eye}} \cdot M_C
+= \frac{160}{f_{\mathrm{obj}}} \cdot \frac{250}{f_{\mathrm{eye}}} \cdot M_C
+\]
+
+Tube length $=160\,\mathrm{mm}$, $M_C$ additional magnification.
+\subsubsection*{Diascopic Fluorescence Microscope}
+
+Sample is illuminated from below, between light source and objective.
+
+\textbf{Limitation:}
+Incomplete suppression of excitation light reduces contrast.
+
+\textbf{Detected intensity:}
+\[
+I \propto \frac{NA_{\mathrm{obj}}^{2}}{M^{2}}, \quad
+NA = n \sin\alpha
+\]
+
+\subsubsection*{Epi-Illumination Microscope}
+Excitation and emission light share the same optical path via the objective.
+A dichroic beam splitter reflects excitation light and transmits fluorescence emission,
+resulting in high contrast.
+
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{src/0_images/epi_ill_microscope.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+
+\textbf{Field of view:}
+\[
+\mathrm{FOV}
+= \frac{\text{sensor size}}{\text{magnification}}
+\]
+\[
+= \frac{D_{\text{input}}}{M}
+\]
+
+\textbf{Detected intensity:}
+\[
+I \propto \frac{NA^{4}}{M^{2}}
+\]
+
+{\tiny
+$\mathrm{FOV}$ : field of view \\
+$D_{\text{input}}$ : sensor size (active dimension) $\left[\mathrm{m}\right]$ \\
+$M$ : total magnification $[-]$ \\
+$NA$ : numerical aperture of objective $[-]$ \\
+$I$ : detected fluorescence intensity\\
+$n$ = refractive index of the medium (air, water, oil)$[-]$ \\
+$\alpha$ = half opening angle of objective $[\mathrm{rad}]$ \\
+}
+\end{minipage}

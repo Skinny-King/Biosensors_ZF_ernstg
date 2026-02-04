@@ -1,0 +1,77 @@
+\subsection*{Electric Field in Fiber from Point Source}
+
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+\textbf{Field of a point current source:}
+\[
+\Phi_e(z)
+= \frac{I_0}{4\pi \sigma_e r}
+= \frac{I_0}{4\pi \sigma_e \sqrt{z^2 + h^2}}
+\]
+
+\textbf{With source strength} $S$:
+\[
+S = \frac{I_0}{4\pi \sigma_e}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=0.55\linewidth]{src/0_images/fiber_and_point_source.png}
+\end{minipage}
+\textbf{Intracellular current:}
+\[
+i_m
+= -\frac{\partial I_i}{\partial z}
+= \frac{1}{r_i}\frac{\partial^2 \Phi_i}{\partial z^2}
+= i_{\text{ion}} + c_m \frac{\partial V_m}{\partial t}
+= \frac{V_m}{r_m}
++ c_m \frac{\partial V_m}{\partial t}
+\]
+
+\subsubsection*{Spatio-Temporal Changes in the Membrane Potential}
+{\tiny
+    \(r_i\frac{\partial v_m}{\partial t} = \frac{1}{c_m}(-i_{ion}r_i + \frac{\partial^2 v_m}{\partial z^2} + \frac{\partial^2 \phi_e}{\partial z^2}) \\
+    = \frac{1}{c_m}(-v_m\frac{r_i}{v_m} + \frac{\partial^2 v_m}{\partial z^2} + \frac{\partial^2 \phi_e}{\partial z^2})\)
+}
+
+\subsubsection*{Activating Function}
+\textbf{Fiber at rest:} \\
+\(v_m = 0, \quad
+\frac{\partial^2 v_m}{\partial z^2} = 0 
+\qquad\Rightarrow \qquad
+r_i\frac{\partial v_m}{\partial t} = \frac{1}{c_m}\frac{\partial^2 \phi_e}{\partial z^2}\) \\
+\textbf{Activation function:}
+\[A(z) = \frac{\partial^2\phi_e}{\partial z^2} 
+=
+r_i c_m \frac{\partial v_m}{\partial t} 
+=
+\tau \frac{\partial v_m}{\partial t}
+> 0 \;\Rightarrow\; {\tiny\text{depolarization}}\]
+
+\textbf{Activation function for a point source:}
+\[
+A(z)
+= \frac{\partial^2 \Phi_e}{\partial z^2}
+= \frac{I_0}{4\pi \sigma_e}
+\frac{2z^2 - h^2}{(h^2 + z^2)^{5/2}}
+\]
+
+\subsubsection*{Membrane Potential over Time}
+Stimulus: \(\Phi_e(z,t), \qquad t \ge 0\)\\
+\textbf{Differential Equation:} \hfill
+with \(Z = \frac{z}{\lambda}\) 
+and \(T = \frac{t}{\tau}\) \\
+\(\frac{\partial^2 v_m}{\partial Z^2} - \frac{\partial v_m}{\partial T} - v_m 
+=
+\frac{\partial^2 \phi_e}{\partial Z^2}\cdot u(T)\)\\
+\textbf{Dirac delta solution:}\\
+\(v_m(Z,T) 
+= 
+\frac{r_r \lambda I_0}{4}\{e^{-|Z|}[1 - erf(\frac{|Z|}{2\sqrt{T}}- \sqrt{T})]-e^{|Z|}[1- erf(\frac{|Z|}{2\sqrt{T}} + \sqrt{T})]\}\) \\
+\textbf{General solution:}\\
+\(v_m(Z, T) 
+= 
+\int_{-\infty}^{\infty} f(\xi)G(Z-\xi, T)d\xi\)\\
+\(G(Z, T) = \frac{1}{4}\{e^{-|Z|}[1 - erf(\frac{|Z|}{2\sqrt{T}})]-e^{|Z|}[1 - erf(\frac{|Z|}{2\sqrt{T}} + \sqrt{T})]\}\) and \(f(Z) = \frac{\partial^2 \phi_e}{\partial Z}\)

@@ -1,0 +1,49 @@
+\subsection*{Airy Patterns}
+
+A point source forms a diffraction-limited Airy pattern.
+Smaller wavelength or larger numerical aperture (NA) reduce its size.
+Images are formed by overlapping Airy patterns.\\
+\textbf{Numerical aperture:}
+\[
+NA \uparrow \;\Rightarrow\; \text{better light collection and resolution}
+\]
+\begin{minipage}[t]{0.48\linewidth}
+    \textbf{Resolution:} \\
+    (Rayleigh criterion)
+    \[
+    R = \frac{0.61\,\lambda_{\mathrm{em}}}{NA}
+    \]
+\end{minipage}
+\begin{minipage}[t]{0.48\linewidth}
+    \textbf{Optimal pixel size:}\\
+    (Nyquist)
+    \[
+    \mathrm{OPS} = \frac{M\, R}{2}
+    \]
+\end{minipage}
+
+\textbf{Sampling:}\\
+$p \le \mathrm{OPS}$: Nyquist satisfied, higher SNR near OPS (binning possible).\\
+$p > \mathrm{OPS}$: increase $M$ or reduce pixel size.
+
+\subsubsection*{Confocal Microscope}
+
+A pinhole blocks out-of-focus light, improving axial resolution at the cost of SNR.
+
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\textbf{Optimal pinhole size:}
+\[
+d_{\text{pinhole}} \approx \frac{0.61\,\lambda\, M}{NA}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{src/0_images/confocal_microscopy.png}
+\end{minipage}
+
+
+\textbf{Spinning-disk:} parallel scanning, faster imaging.\\
+\textbf{Two-photon:} excitation only at focus ($P\propto I^2$), deeper penetration, less photobleaching.

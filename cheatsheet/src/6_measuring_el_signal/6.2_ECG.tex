@@ -1,18 +1,31 @@
 \subsection*{ECG (Electrocardiogram)}
+
+\textbf{Einthoven-Leads:}
 \[
-V_I   = \Phi_{LA} - \Phi_{RA}
+V_I   = \Phi_{\mathrm{LA}} - \Phi_{\mathrm{RA}}, \quad
+V_{II} = \Phi_{\mathrm{LL}} - \Phi_{\mathrm{RA}},
 \]
 
 \[
-V_{II} = \Phi_{LL} - \Phi_{RA}
-\]
-
-\[
-V_{III} = \Phi_{LL} - \Phi_{LA}
-\]
-
-\[
+V_{III}= \Phi_{\mathrm{LL}} - \Phi_{\mathrm{LA}}, \quad
+\boxed{
 V_I + V_{III} = V_{II}
+}
 \]
 
-\includegraphics[width=0.8\linewidth]{src/0_images/electrocardiography.png}
+\vspace{0.5em}
+
+\textbf{Cardiac vector representation:}
+\[
+\mathbf{H}
+= h_x\,\mathbf{a}_x
++ h_y\,\mathbf{a}_y
++ h_z\,\mathbf{a}_z
+\]
+
+\textbf{Lead voltage:}
+\[
+V_l
+= h_x l_x + h_y l_y + h_z l_z
+= \mathbf{H} \cdot \mathbf{l}
+\]

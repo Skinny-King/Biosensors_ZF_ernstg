@@ -1,0 +1,79 @@
+\subsection*{Potentials and Currents in a Fiber}
+\textbf{Subthreshold regime:} Core-conductor model
+\subsubsection*{Axial Currents}
+\begin{minipage}[t]{0.55\linewidth}
+\textbf{Currents:}
+\[
+\frac{\partial \Phi_e}{\partial x} = - I_e r_e,
+\quad
+\frac{\partial \Phi_i}{\partial x} = - I_i r_i
+\]
+
+\textbf{Extracellular stimulation:}
+\[
+\frac{\partial I_e}{\partial x} = i_m + i_p, 
+\quad
+\frac{\partial I_i}{\partial x} = - i_m
+\]
+
+\end{minipage}
+\begin{minipage}[t]{0.48\linewidth}
+\vspace{0pt}
+\tiny
+$\Phi_e$ : extracellular potential $\left[\mathrm{V}\right]$ \\
+$\Phi_i$ : intracellular potential $\left[\mathrm{V}\right]$ \\
+$I_{e,i}$ : extra/intracell axial current $\left[\mathrm{A}\right]$ \\
+$I$ : total axial current $\left[\mathrm{A}\right]$ \\
+$r_{e,i}$ : extra/intracell resistivity $\left[\Omega\mathrm{m}\right]$ \\
+$i_m$ : membr. current per length $\left[\mathrm{A}/\mathrm{m}\right]$ \\
+$i_p$ : stim. current per length $\left[\mathrm{A}/\mathrm{m}\right]$ \\
+\end{minipage}
+
+\textbf{Total axial current:}
+\[
+\frac{\partial I}{\partial x}
+= \frac{\partial (I_e + I_i)}{\partial x}
+= (i_m + i_p) - i_m
+= i_p
+\]
+\subsubsection*{Transmembrane Potential $V_m$}
+
+\(
+V_m = \Phi_i - \Phi_e,
+\quad
+\frac{\partial V_m}{\partial x}
+= \frac{\partial \Phi_i}{\partial x} - \frac{\partial \Phi_e}{\partial x}
+= - r_i I_i + r_e I_e
+\)
+
+Using \(I = I_e + I_i\):
+\[
+\frac{\partial V_m}{\partial x}
+= - r_i I_i + r_e (I - I_i)
+= - (r_i + r_e) I_i + r_e I
+\]
+
+\subsubsection*{Transmembrane Current $i_m$}
+\(
+\frac{\partial^2 V_m}{\partial x^2}
+= - (r_i + r_e)\frac{\partial I_i}{\partial x}
++ r_e \frac{\partial I}{\partial x}
+\) with \(\frac{\partial I_i}{\partial x} = - i_m\);
+ \(\frac{\partial I}{\partial x} = i_p\):
+\[
+\frac{\partial^2 V_m}{\partial x^2}
+= (r_i + r_e)\, i_m + r_e\, i_p
+\]
+
+\textbf{Membrane current:}
+\[
+i_m
+= \frac{1}{r_i + r_e}
+\left(
+\frac{\partial^2 V_m}{\partial x^2}
+- r_e\, i_p
+\right),
+\quad
+i_m = \frac{V_m}{r_m}
++ c_m \frac{\partial V_m}{\partial t}
+\]
